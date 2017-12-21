@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.mailo.serviceapplication5778.MainActivity"
-    android:orientation="vertical">
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,16 +21,62 @@
         android:text="Test started service " />
 
     <Button
+        android:layout_marginTop="10dp"
         android:id="@+id/startServiceButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Start service" />
 
 
     <Button
         android:id="@+id/stopServiceButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Stop service" />
 
-</LinearLayout>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/startIntentServiceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Intent service" />
+
+
+    <Button
+        android:id="@+id/stopIntentServiceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stop Intent service" />
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/startForegroundIntentServiceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Foreground Intent service" />
+
+    <Button
+        android:id="@+id/stopForegroundIntentServiceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stop Foreground Intent service" />
+
+
+        <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/startNotificationButton"
+            android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Notification" />
+
+        <Button
+            android:id="@+id/stoptNotificationButton"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop Notification" />
+
+    </LinearLayout>
+</ScrollView>
