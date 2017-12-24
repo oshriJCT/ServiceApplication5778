@@ -80,6 +80,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
             Bitmap bitmap =  BitmapFactory.decodeResource(getResources(),R.drawable.services);
             nBuilder.setLargeIcon(bitmap);
 
+            nBuilder.setSmallIcon(R.drawable.services);
             nBuilder.setContentTitle("Notification Title");
             nBuilder.setContentText("Notification Content");
 
