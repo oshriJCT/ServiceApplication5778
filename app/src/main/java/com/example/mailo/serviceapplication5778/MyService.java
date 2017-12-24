@@ -16,10 +16,6 @@ public class MyService extends Service {
         id = count++;
     }
 
-    @Override
-    public void onStart(Intent intent, int startId) {
-        super.onStart(intent, startId);
-    }
 
     String serviceInfo(int sid) {
         return "service [" + id + "] startId = " + sid;

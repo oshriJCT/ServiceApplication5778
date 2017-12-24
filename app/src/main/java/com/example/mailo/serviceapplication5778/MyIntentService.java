@@ -35,26 +35,26 @@ public class MyIntentService extends IntentService {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            Log.d(TAG, serviceInfo() + " print ...");
+            Log.d(TAG, serviceInfo(startId) + " print ...");
         }
     }
 
 
-    String serviceInfo() {
-        return "service [" + id + "] startId = " + startId;
+    String serviceInfo(int sid) {
+        return "service [" + id + "] startId = " + sid;
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
         id++;
-        Log.d(TAG, serviceInfo() + " onCreate ...");
+        Log.d(TAG, serviceInfo(startId) + " onCreate ...");
 
     }
 
     @Override
     public void onDestroy() {
-        Log.d(TAG, serviceInfo() + " onDestroy ...");
+        Log.d(TAG, serviceInfo(startId) + " onDestroy ...");
         isRun = false;
         super.onDestroy();
     }
@@ -63,7 +63,7 @@ public class MyIntentService extends IntentService {
     public int onStartCommand(Intent intent, int flags, int startId) {
         this.startId = startId;
         isRun = true;
-        Log.d(TAG, serviceInfo() + " onStartCommand start ...");
+        Log.d(TAG, serviceInfo(startId) + " onStartCommand start ...");
         return super.onStartCommand(intent, flags, startId);
     }
 }
