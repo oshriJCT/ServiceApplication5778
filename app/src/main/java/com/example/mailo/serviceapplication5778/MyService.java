@@ -31,6 +31,7 @@ public class MyService extends Service {
         super.onCreate();
         id++;
         Log.d(TAG, serviceInfo(startId) + " onCreate ...");
+       // sendBroadcast(new Intent(getBaseContext(),MyReceiver.class));
     }
 
     @Override
@@ -50,6 +51,7 @@ public class MyService extends Service {
         Thread thread = new Thread() {
             @Override
             public void run() {
+                sendBroadcast(new Intent(getBaseContext(),MyReceiver.class));
                 while (isRun) {
                     try {
                         Thread.sleep(1000);
